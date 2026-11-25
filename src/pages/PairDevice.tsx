@@ -158,7 +158,7 @@ export default function PairDevice() {
             onClick={() => {
               // If user has a credential, go back to share page; otherwise go home
               const cred = localStorage.getItem("credential");
-              navigate(cred ? "/share" : "/pair", { replace: true });
+              navigate("/share", { replace: true });
             }}
             className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-white transition"
           >
