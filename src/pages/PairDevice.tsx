@@ -155,9 +155,9 @@ export default function PairDevice() {
         {/* Navigation & Header */}
         <div className="mb-6 flex items-center justify-between">
           <button
+            type="button"
             onClick={() => {
-              // If user has a credential, go back to share page; otherwise go home
-              const cred = localStorage.getItem("credential");
+              // Keep the recovery and pairing options available without a credential.
               navigate("/share");
             }}
             className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-white transition"

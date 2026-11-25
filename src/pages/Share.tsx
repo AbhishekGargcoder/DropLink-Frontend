@@ -26,12 +26,11 @@ export default function Share() {
   const verifyAuth = useCallback(async () => {
     const cred = localStorage.getItem("credential");
     if (!cred) {
-      navigate("/pair", { replace: true });
       return;
     }
     await refreshCurrentDevice();
     await refreshDevices();
-  }, [navigate, refreshCurrentDevice, refreshDevices]);
+  }, [refreshCurrentDevice, refreshDevices]);
 
   useEffect(() => {
     void verifyAuth();
