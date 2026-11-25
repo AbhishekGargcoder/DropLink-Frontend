@@ -22,7 +22,7 @@ function App() {
     <div>
           <Routes>
             <Route path="/" element={ isMobile ? <Share /> : <DashBoard />} />   {/* laptop dasboard */}
-            <Route path="/pair" element={<PairDevice />} />
+            <Route path="/pair" element={isMobile ? <PairDevice /> : <Share />} />
             <Route path = "/share" element={<Share />}/>  {/* mobile dashboard */}
           </Routes>
     </div>
